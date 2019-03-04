@@ -13,6 +13,6 @@ class UserViewSet(viewsets.ModelViewSet):
     This viewset provides operations on Users table to the same user.
     """
 
-    # permission_classes = [IsOwnerOrReadOnly,]
+    permission_classes = [IsOwnerOrReadOnly,]
     queryset = User.objects.all()
     serializer_class = UserSerializer

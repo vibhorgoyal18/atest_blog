@@ -7,5 +7,13 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://stampy.db.elephantsql.com:5432/fkulyono</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="Django default" uuid="19266c42-cc00-4ec1-b357-f4b340c7ddbb">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/atest_blog/settings.py</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://stampy.db.elephantsql.com:5432/fkulyono</jdbc-url>
+    </data-source>
   </component>
 </project>

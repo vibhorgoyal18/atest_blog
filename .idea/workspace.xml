@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3cc1a72-adf9-4f1e-8868-ba41c474a571" name="Default Changelist" comment="" />
+    <list default="true" id="f3cc1a72-adf9-4f1e-8868-ba41c474a571" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Vibhor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Vibhor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atest/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/atest/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atest/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/atest/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atest_blog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/atest_blog/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subscribers/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/subscribers/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subscribers/migrations/0002_auto_20190302_1550.py" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +76,68 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/atest/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-13">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/atest/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/atest/permissions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/atest_blog/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="72" column="48" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/atest_blog/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://aa3f3b8a-bb19-4ee8-93f3-d9706da58964/database/fkulyono/schema/public/table/auth_user">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -81,7 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/atest_blog/settings.py" />
         <option value="$PROJECT_DIR$/subscribers/migrations/serializers.py" />
         <option value="$PROJECT_DIR$/subscribers/serializers.py" />
         <option value="$PROJECT_DIR$/subscribers/views.py" />
@@ -90,9 +160,10 @@
         <option value="$PROJECT_DIR$/atest_blog/urls.py" />
         <option value="$PROJECT_DIR$/atest/permissions.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/atest/views.py" />
         <option value="$PROJECT_DIR$/subscribers/models.py" />
         <option value="$PROJECT_DIR$/atest/serializers.py" />
+        <option value="$PROJECT_DIR$/atest/views.py" />
+        <option value="$PROJECT_DIR$/atest_blog/settings.py" />
       </list>
     </option>
   </component>
@@ -107,6 +178,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -122,6 +194,12 @@
             <path>
               <item name="atest_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="atest_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="atest" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="atest_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atest_blog" type="462c0819:PsiDirectoryNode" />
               <item name="atest_blog" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -129,11 +207,16 @@
               <item name="atest_blog" type="462c0819:PsiDirectoryNode" />
               <item name="subscribers" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="atest_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="atest_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="subscribers" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -144,6 +227,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -204,11 +288,12 @@
       <workItem from="1551620888313" duration="12028000" />
       <workItem from="1551671008915" duration="11575000" />
       <workItem from="1551690822619" duration="206000" />
+      <workItem from="1551691456462" duration="5863000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38402000" />
+    <option name="totallyTimeSpent" value="44265000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -221,19 +306,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26349613" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2667095" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32974428" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39973083" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39973083" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32974428" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="manage.py@atest_blog" order="8" visible="true" weight="0.32974428" />
+      <window_info anchor="bottom" id="manage.py@atest_blog" order="8" weight="0.32974428" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32974428" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32974428" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -337,15 +423,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/urls/conf.py" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/conf/urls/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/atest_blog/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/urls.py" />
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/permissions.py" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/mixins.py" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/viewsets.py" />
     <entry file="file://$PROJECT_DIR$/subscribers/models.py">
@@ -355,6 +433,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/atest/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/atest_blog/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -362,30 +443,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/atest/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atest/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/atest/permissions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="38" selection-start-column="38" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/atest/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
+        <state relative-caret-position="-13">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -396,6 +457,37 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atest/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/permissions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="80" column="6" selection-start-line="80" selection-start-column="6" selection-end-line="80" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atest/permissions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/atest_blog/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="72" column="48" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
         </state>
       </provider>
     </entry>

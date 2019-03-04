@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'atest.apps.AtestConfig',
     'rest_framework',
+    'rest_framework.authtoken',
     'subscribers.apps.SubscribersConfig'
 ]
 
