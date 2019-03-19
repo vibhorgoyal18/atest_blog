@@ -18,5 +18,10 @@
       <user-name>fkulyono</user-name>
       <introspection-schemas>@:@</introspection-schemas>
     </data-source>
+    <data-source name="atestlyc_atest_blog@192.185.129.82" uuid="15ecfae8-a432-4ecf-b76f-8a4335df4639">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>atestlyc_admin</user-name>
+    </data-source>
   </component>
 </project>
