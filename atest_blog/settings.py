@@ -135,6 +135,8 @@ STATIC_URL = '/static/'
 
 CORS_ORIGIN_ALLOW_ALL = True
 
+AUTH_USER_MODEL = 'users.User'
+
 # CORS_ORIGIN_WHITELIST = (
 #     'http//:localhost:4200',
 # )

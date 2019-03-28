@@ -1,6 +1,5 @@
 from rest_framework import serializers
 from comments.models import Comments
-from django.contrib.auth.models import User
 
 
 class CommentsSerializer(serializers.HyperlinkedModelSerializer):

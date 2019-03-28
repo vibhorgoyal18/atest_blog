@@ -7,11 +7,11 @@ from comments.views import CommentViewSet
 from rest_framework.authtoken.views import obtain_auth_token
 
 router = DefaultRouter()
-router.register(r'users', UserViewSet)
-router.register(r'comments', CommentViewSet)
-router.register(r'sendmail', SendMail, basename='sendMail')
+router.register(r'api/users', UserViewSet)
+router.register(r'api/comments', CommentViewSet)
+router.register(r'api/contact', SendMail, basename='sendMail')
 
 urlpatterns = [
     url(r'^', include(router.urls)),
-    path('login/', obtain_auth_token, name='api-token-auth')
+    path('api/login/', obtain_auth_token, name='api-token-auth')
 ]
