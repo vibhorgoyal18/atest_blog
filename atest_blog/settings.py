@@ -37,11 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'atest.apps.AtestConfig',
     'rest_framework',
-    'rest_framework.authtoken',
+    'django_expiring_token',
     'comments.apps.CommentsConfig',
     'contact.apps.ContactConfig',
     'corsheaders',
     'users.apps.UsersConfig',
+    'rest_framework_swagger',
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ WSGI_APPLICATION = 'atest_blog.wsgi.application'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.TokenAuthentication',
+        'django_expiring_token.authentication.ExpiringTokenAuthentication',
     ),
 }
 
@@ -137,6 +138,21 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 AUTH_USER_MODEL = 'users.User'
 
-# CORS_ORIGIN_WHITELIST = (
-#     'http//:localhost:4200',
-# )
+sendgrid_apikey = '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'
+
+from datetime import timedelta
+
+EXPIRING_TOKEN_DURATION = timedelta(minutes=1)
+
+SWAGGER_SETTINGS = {
+    'USE_SESSION_AUTH': False,
+    'JSON_EDITOR': True,
+    'SECURITY_DEFINITIONS': {
+        'oauth2': {
+            'type': 'apiKey',
+            'description': 'Example value. Token ac8bfe1ee265c14861b06a4c7ff4a3d9d04c9a1f12d3',
+            'name': 'Authorization',
+            'in': 'header',
+        }
+    },
+}

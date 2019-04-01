@@ -1,17 +1,17 @@
-from rest_framework import viewsets
+from rest_framework.generics import CreateAPIView
 from django.http import JsonResponse
 import sendgrid
 from sendgrid.helpers.mail import *
 from contact.serializers import ContactSerializer
+from atest_blog.settings import sendgrid_apikey
 
 
-class SendMail(viewsets.ViewSet):
+class ContactView(CreateAPIView):
 
-    def create(self, request):
-        serializer = ContactSerializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        sg = sendgrid.SendGridAPIClient(
-            apikey='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')
+    serializer_class = ContactSerializer
+
+    def create(self, serializer: ContactSerializer):
+        sg = sendgrid.SendGridAPIClient(apikey=sendgrid_apikey)
         from_email = Email(serializer.data['email'])
         to_email = Email("vibhor.goyal@atest.co.in")
         subject = serializer.data['subject']

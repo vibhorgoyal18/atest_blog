@@ -1,17 +1,16 @@
-from django.conf.urls import include, url
-from django.urls import path
-from rest_framework.routers import DefaultRouter
-from contact.views import  SendMail
-from users.views import UserViewSet
+from django.urls import path, include
+from contact.views import ContactView
 from comments.views import CommentViewSet
 from rest_framework.authtoken.views import obtain_auth_token
+from rest_framework_swagger.views import get_swagger_view
 
-router = DefaultRouter()
-router.register(r'api/users', UserViewSet)
-router.register(r'api/comments', CommentViewSet)
-router.register(r'api/contact', SendMail, basename='sendMail')
+schema_view = get_swagger_view(title='My API')
 
 urlpatterns = [
-    url(r'^', include(router.urls)),
-    path('api/login/', obtain_auth_token, name='api-token-auth')
+
+    path('comments', CommentViewSet.as_view({'get': 'list'}), name='comments'),
+    path('contact', ContactView.as_view(), name='contact'),
+    path('user/', include('users.urls', namespace='user')),
+    path('auth/', include('django_expiring_token.urls'), name='api-token-auth'),
+    path('', schema_view, name='api-root'),
 ]

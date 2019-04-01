@@ -1,27 +1,35 @@
 from rest_framework import serializers
 from users.models import User
-from django.contrib.auth.hashers import make_password
 
 
-class UserSerializer(serializers.HyperlinkedModelSerializer):
-    password = serializers.CharField(max_length=128, style={'input_type': 'password'}, write_only=True)
+class UserSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(max_length=128, min_length=8,
+                                     style={'input_type': 'password'}, write_only=True)
 
     class Meta:
         model = User
-        fields = ('url', 'id', 'email', 'first_name', 'last_name', 'password',)
+        fields = ("id", "last_login", "email", "first_name", "last_name", "date_joined", "is_active", "password")
 
-    def create(self, validated_data):
-        user = User(email=validated_data['email'],
-                    first_name=validated_data['first_name'],
-                    last_name=validated_data['last_name'],
-                    password=make_password(validated_data['password']))
-        user.save()
-        return user
 
-    def update(self, instance, validated_data):
-        instance.email = validated_data.get('email', instance.email)
-        instance.first_name = validated_data.get('first_name', instance.first_name)
-        instance.last_name = validated_data.get('last_name', instance.last_name)
-        instance.password = make_password(validated_data.get('password', instance.password))
-        instance.save()
-        return instance
+class PassResetSerializer(serializers.Serializer):
+    email = serializers.EmailField(required=True)
+
+    class Meta:
+        fields: '__all__'
+
+
+class PassChangeSerializer(serializers.Serializer):
+    old_password = serializers.CharField(max_length=32)
+    new_password = serializers.CharField(max_length=32)
+
+    class Meta:
+        fields: '__all__'
+
+
+class UserUpdateSerializer(serializers.Serializer):
+    first_name = serializers.CharField(max_length=30, required=True)
+    last_name = serializers.CharField(max_length=30, required=True)
+
+    class Meta:
+        model = User
+        fields: '__all__'
