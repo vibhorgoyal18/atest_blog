@@ -4,13 +4,15 @@ import sendgrid
 from sendgrid.helpers.mail import *
 from contact.serializers import ContactSerializer
 from atest_blog.settings import sendgrid_apikey
+from rest_framework.request import Request
 
 
 class ContactView(CreateAPIView):
-
     serializer_class = ContactSerializer
 
-    def create(self, serializer: ContactSerializer):
+    def create(self, request: Request, *args, **kwargs):
+        serializer = ContactSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
         sg = sendgrid.SendGridAPIClient(apikey=sendgrid_apikey)
         from_email = Email(serializer.data['email'])
         to_email = Email("vibhor.goyal@atest.co.in")

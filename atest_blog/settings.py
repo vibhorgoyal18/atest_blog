@@ -142,7 +142,7 @@ sendgrid_apikey = 'SG.yH84X-v7Rba_piNeIrxsAA.DZORpSk0KisCjsvj1_g8Lx0rITmtEkD7q47
 
 from datetime import timedelta
 
-EXPIRING_TOKEN_DURATION = timedelta(minutes=1)
+EXPIRING_TOKEN_DURATION = timedelta(days=1)
 
 SWAGGER_SETTINGS = {
     'USE_SESSION_AUTH': False,

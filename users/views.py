@@ -1,6 +1,5 @@
 from users.models import User
 from users.serializers import UserSerializer, PassResetSerializer, UserUpdateSerializer, PassChangeSerializer
-from users.permissions import UserPermissions
 from rest_framework.permissions import IsAuthenticated
 import sendgrid
 from sendgrid.helpers.mail import *
@@ -22,9 +21,10 @@ class CreateUserView(CreateAPIView):
     serializer_class = UserSerializer
 
     def create(self, request, *args, **kwargs):
+
+        serializer = UserSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
         try:
-            serializer = UserSerializer(data=request.data)
-            serializer.is_valid(raise_exception=True)
             serializer.save(
                 email=serializer.validated_data['email'],
                 first_name=serializer.validated_data['first_name'],
@@ -46,7 +46,7 @@ class UserSelfRetrieveView(RetrieveAPIView):
     Get user details
     """
     serializer_class = UserSerializer
-    permission_classes = [UserPermissions, ]
+    permission_classes = [IsAuthenticated]
 
     def retrieve(self, request: Request, *args, **kwargs):
         serializer = UserSerializer(User.objects.filter(id=self.request.user.id), many=True)
@@ -58,7 +58,7 @@ class UserSelfUpdateView(UpdateAPIView):
     Update user's first name and last name
     """
     serializer_class = UserUpdateSerializer
-    permission_classes = [UserPermissions, ]
+    permission_classes = [IsAuthenticated]
 
     def update(self, request: Request, *args, **kwargs):
         instance = User.objects.get(id=self.request.user.id)
@@ -81,8 +81,10 @@ class PassResetView(CreateAPIView):
     serializer_class = PassResetSerializer
 
     def create(self, request: Request, *args, **kwargs):
+
+        serializer = PassResetSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
         try:
-            serializer = UserSerializer(data=request.data)
             user = User.objects.get(email=serializer.data['email'])
         except Exception as exception:
             if exception.__class__.__name__ is 'DoesNotExist':
@@ -127,7 +129,7 @@ class ChangePasswordView(UpdateAPIView):
     Change user's password
     """
     serializer_class = PassChangeSerializer
-    permission_classes = [UserPermissions, ]
+    permission_classes = [IsAuthenticated]
 
     def update(self, request: Request, *args, **kwargs):
         instance = User.objects.get(id=self.request.user.id)
@@ -143,6 +145,7 @@ class ChangePasswordView(UpdateAPIView):
 
         is_valid_password = instance.check_password(serializer.validated_data['new_password'])
         if not is_valid_password:
-            return Response({'success': False, 'error': 'Password change failed'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response({'success': False, 'error': 'Password change failed'},
+                            status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
         return Response({'success': True}, status=status.HTTP_200_OK)

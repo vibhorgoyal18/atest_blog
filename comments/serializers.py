@@ -1,10 +1,19 @@
 from rest_framework import serializers
 from comments.models import Comments
+from users.serializers import CommentUserSerializer
 
 
-class CommentsSerializer(serializers.HyperlinkedModelSerializer):
-    owner = serializers.ReadOnlyField(source='owner.username')
+class CommentsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Comments
+        fields = "__all__"
+        read_only_fields = ('owner',)
+
+
+class CommentsViewSerializer(serializers.ModelSerializer):
+    owner = CommentUserSerializer()
 
     class Meta:
         model = Comments
-        fields = ('url', 'id', 'owner', 'comment', 'blog', 'date_added')
+        fields = '__all__'
+        depth = 1
